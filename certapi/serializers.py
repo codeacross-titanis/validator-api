@@ -13,7 +13,7 @@ class BadgeSerializer(serializers.ModelSerializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
-    badge_set = BadgeSerializer(many=True)
+    badge_set = BadgeSerializer(many=True, read_only=True)
 
     class Meta:
         model = Student
