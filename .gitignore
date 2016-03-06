@@ -64,3 +64,4 @@ target/
 # Secrets
 validator/secrets/
 *.pem
+static/

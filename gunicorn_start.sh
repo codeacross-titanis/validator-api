@@ -2,11 +2,11 @@
 
 NAME="validator"                              #Name of the application (*)
 DJANGODIR=/srv/validator-api                          # Django project directory (*)
-SOCKFILE=/srv/anmp/run/gunicorn.sock     # we will communicate using this unix socket (*)
+SOCKFILE=/srv/validator-api/run/gunicorn.sock     # we will communicate using this unix socket (*)
 USER=ubuntu                                   # the user to run as (*)
 GROUP=www-data                                # the group to run as (*)
 NUM_WORKERS=6                                 # how many worker processes should Gunicorn spawn (*)
-DJANGO_WSGI_MODULE=config.wsgi                # WSGI module name (*)
+DJANGO_WSGI_MODULE=validator.wsgi # WSGI module name (*)
 
 echo "Starting $NAME as `whoami`"
 
