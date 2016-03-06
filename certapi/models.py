@@ -29,7 +29,7 @@ class Badge(TimeStampedModel):
     is_validated = models.BooleanField(default=False)
     validated_at = models.DateField(null=True, blank=True)
     validated_by = models.ForeignKey(Provider, null=True, blank=True)
-    logo = models.ImageField()
+    logo = models.URLField()
 
     def __str__(self):
         return self.name
