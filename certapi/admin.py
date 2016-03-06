@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Badge, Student
+from .models import Badge, Student, Provider
 
 
 class BadgeInline(admin.TabularInline):
@@ -13,3 +13,4 @@ class StudentAdmin(admin.ModelAdmin):
 
 admin.site.register(Badge)
 admin.site.register(Student, StudentAdmin)
+admin.site.register(Provider)
