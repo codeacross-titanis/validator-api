@@ -10,6 +10,13 @@ class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
+    def get_queryset(self):
+        queryset = Student.objects.all()
+        email = self.request.query_params.get('email', None)
+        if email is not None:
+            queryset = queryset.filter(email=email)
+        return queryset
+
 
 class ProviderViewSet(viewsets.ModelViewSet):
     queryset = Provider.objects.all()
